@@ -12,7 +12,11 @@ int main(){
         if(ssss[n]==10 || ssss[n]==13){
             strcpy(mems," <br> ");
         }else{
-            sprintf(mems,"&#%03d ",(int)ssss[n]);
+            if(ssss[n]==32){
+                sprintf(mems,"&ensp; ");
+            }else{
+                sprintf(mems,"&#%03d ",(int)ssss[n]);
+            }
         }
         printf("%s",mems);
         
